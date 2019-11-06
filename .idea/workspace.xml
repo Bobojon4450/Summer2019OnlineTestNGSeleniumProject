@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf43550b-708c-46cd-9c81-b57a367391b5" name="Default Changelist" comment="" />
+    <list default="true" id="cf43550b-708c-46cd-9c81-b57a367391b5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/utils/TitleVerification.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/utils/TitleVerification.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +21,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -27,6 +33,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1SJfZ9wZOWBoWB29AadcyorwoBD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -45,7 +52,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TitleVerification.test">
+  <component name="RunManager" selected="JUnit.TestForID_Locator.test_linkText">
     <configuration name="TestForID_Locator.test_TagName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Summer2019OnlineTestNGSeleniumProject" />
       <extension name="coverage">
@@ -128,10 +135,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestForID_Locator.test_linkText" />
         <item itemvalue="JUnit.TitleVerification.test" />
         <item itemvalue="JUnit.TitleVerification.VYTrack_login_Verify" />
         <item itemvalue="JUnit.TitleVerification.VYTrack_loginVerify" />
-        <item itemvalue="JUnit.TestForID_Locator.test_linkText" />
         <item itemvalue="JUnit.TestForID_Locator.test_TagName" />
       </list>
     </recent_temporary>
@@ -148,5 +155,16 @@
       <updated>1571286671812</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
