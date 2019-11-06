@@ -28,7 +28,7 @@ public class TestForID_Locator {
     }
 
     @Test
-    public void test_Name() {
+    public void test_Name() {/*Here we locating an elements by using By.name locator    */
         BrowserUtils.maximaze(driver);
         driver.get("http://practice.cybertekschool.com/sign_up");
         driver.findElement(By.name("full_name")).sendKeys("Test User");
