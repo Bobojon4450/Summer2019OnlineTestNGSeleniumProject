@@ -11,6 +11,7 @@ import utils.BrowserUtils;
 
 public class TestForID_Locator {
 
+    /*  This web driver is an Interface */
     WebDriver driver = BrowserFactory.getDriver("chrome");
 
     @Test
