@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!--   xml comments syntax, CTRL + / on Windows OS  -->
+<suite name="Regression">
+<!--    <test name="Login tests">-->
+<!--        <classes>        &lt;!&ndash; . is a delimiter, name is a name of the class we execute &ndash;&gt;-->
+<!--            <class name="tests.vytrack.LoginTests"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="CreateNewCalendar">-->
+<!--        <classes>-->
+<!--            <class name="tests.vytrack.CreateCarTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Calendar Event tests">-->
+<!--        <classes>-->
+<!--            <class name="tests.vytrack.NewCalendarEventsTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="VYtrack Regression tests">-->
+<!--    &lt;!&ndash; Parametrize the test and give them a name       &ndash;&gt;-->
+<!--        <parameter name="test" value="regression"></parameter>-->
+<!--        <packages>-->
+<!--            <package name="tests.vytrack"></package>-->
+<!--        </packages>-->
+<!--    </test>-->
+</suite>
