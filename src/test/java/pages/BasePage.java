@@ -69,6 +69,8 @@ public class BasePage {
         return false;
     }
 
+    // '.o_loading' css locator of loader_mask of OdooCRM
+
     /**
      * This method stands for navigation in VYtrack app
      * provide tab name, for example "Fleet" as a String

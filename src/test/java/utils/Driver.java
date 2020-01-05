@@ -20,13 +20,11 @@ public class Driver {
             String browser = ConfigurationReader.getProperty("browser");
             switch (browser) {
                 case "chrome":
-                    /*  Sets browser to headless browser. Super fast
-                        WebDriverManager.chromedriver().setup();
-                        ChromeOptions chromeOptions = new ChromeOptions();
-                        chromeOptions.setHeadless(true);//false makes it run in regular mode, kicking the browser.
-                        driver = new ChromeDriver(chromeOptions);   */
-
                     WebDriverManager.chromedriver().setup();
+                    /*Sets browser to headless browser. Super fast*/
+                    /*ChromeOptions chromeOptions = new ChromeOptions();
+                    chromeOptions.setHeadless(true);//false makes it run in regular mode, kicking the browser.
+                    driver = new ChromeDriver(chromeOptions);*/
                     driver = new ChromeDriver();
                     break;
                 case "firefox":

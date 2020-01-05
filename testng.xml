@@ -1,12 +1,13 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <!--   xml comments syntax, CTRL + / on Windows OS  -->
 <suite name="Regression">
-<!--    <test name="Login tests">-->
-<!--        <classes>        &lt;!&ndash; . is a delimiter, name is a name of the class we execute &ndash;&gt;-->
-<!--            <class name="tests.vytrack.LoginTests"></class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Login tests">
+        <classes>        <!-- . is a delimiter, name is a name of the class we execute -->
+            <class name="tests.vytrack.LoginTests"></class>
+        </classes>
+    </test>
 <!--    <test name="CreateNewCalendar">-->
+<!--        <parameter name="test" value="partialRegression"></parameter>-->
 <!--        <classes>-->
 <!--            <class name="tests.vytrack.CreateCarTest"/>-->
 <!--        </classes>-->

@@ -10,6 +10,10 @@ import utils.ConfigurationReader;
 import utils.Driver;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 /* This class will be a test foundation for all test classes. We'll put here only @BeforeMethod and @AfterMethod */
 /* In this way @BeforeMethod and  @AfterMethod methods will be the same */
@@ -29,22 +33,30 @@ public abstract class TestBase {
 
 
     /* To create report for the class of tests. Class can have many tests. */
+
+    /* <parameter name="test" value="smoke_test_qa1"></parameter> */
     @BeforeTest
-    @Parameters("test") /* parameter come from testng.xml */
+    @Parameters({"test", "env_url"}) /* parameter come from testng.xml */
     /* @Optional means, it can be passed from xml or anywhere */
-    public void beforeTest(@Optional String param) {
-        String reportName = "report";
+    public void beforeTest(@Optional String param, @Optional String env_url) {
+        String reportName = "-test-report";
         if (param != null) {
-            reportName = param;
+            reportName = "-" + param;
         }
         /* Here we could add Date and Time after slash before report */
-        String filePath = System.getProperty("user.dir") + "/test-output/" + param + ".html";
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd-HH-mm");//-yyyy-MM-dd HH:mm
+        String date = df.format(new Date());
+        String filePath = System.getProperty("user.dir") + "/test-output/" + date + reportName + ".html";
         extentReports = new ExtentReports();
         extentHtmlReporter = new ExtentHtmlReporter(filePath);
         extentReports.attachReporter(extentHtmlReporter);
         extentHtmlReporter.config().setReportName("VYtrack Test Results");
         /* System Information */
-        extentReports.setSystemInfo("Environment", "QA1");
+        String env = ConfigurationReader.getProperty("url");
+        if (env_url != null) {
+            env = env_url;
+        }
+        extentReports.setSystemInfo("Environment", env);/* Sets the environment on the report */
         extentReports.setSystemInfo("Browser", ConfigurationReader.getProperty("browser"));
         extentReports.setSystemInfo("OS", System.getProperty("os.name"));
     }
@@ -56,10 +68,14 @@ public abstract class TestBase {
     }
 
 
-    @BeforeMethod   /* Runs before every test in the class  */
-    public void setUp() {
+    @BeforeMethod /* Runs before every test in the class */
+    @Parameters("env_url")
+    public void setUp(@Optional String env_url) {
         String URL = ConfigurationReader.getProperty("url");
         BrowserUtils.maximaze(Driver.getDriver());
+        if (env_url != null) {
+            URL = env_url;
+        }
         Driver.getDriver().get(URL);
     }
 
@@ -82,5 +98,8 @@ public abstract class TestBase {
         Driver.close();
     }
 }
+
+
+
 
 /*  ImplicitWait() and ExplicitWait can trigger issues if both are used in the same test. Use one of them only.   */

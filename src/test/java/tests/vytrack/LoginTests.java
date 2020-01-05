@@ -19,7 +19,7 @@ public class LoginTests extends TestBase {
 
     @Test(description = "Verify that page title is a 'Dashboard'")
     public void test1(){
-        extentTest = extentReports.createTest("Create a new car");
+        extentTest = extentReports.createTest("Login");
 
         logPage.login(ConfigurationReader.getProperty("user_name"), ConfigurationReader.getProperty("password"));
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
@@ -27,7 +27,7 @@ public class LoginTests extends TestBase {
         wait.until(ExpectedConditions.titleIs("Dashboard"));
         Assert.assertEquals(Driver.getDriver().getTitle(),"Dashboard");
 
-        extentTest.pass("New car was created");
+        extentTest.pass("Title was verified");
     }
 
 
